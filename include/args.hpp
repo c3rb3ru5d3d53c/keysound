@@ -24,6 +24,7 @@ static struct arguments {
     int flag = 0;
     bool daemon = false;
     bool kill = false;
+    bool verbose = false;
     std::string json = "";
     std::string wav_file = "";
     std::string dir = "";
@@ -114,6 +115,7 @@ static void process_command_line_arguments(int argc, char** argv) {
         {"log", required_argument, 0, 'l'},
         {"daemon", no_argument, 0, 'D'},
         {"kill", no_argument, 0, 'k'},
+        {"verbose", no_argument, 0, 'v'},
         {"help", no_argument, 0, '?'},
         {0, 0, 0, 0}
     };
@@ -152,6 +154,9 @@ static void process_command_line_arguments(int argc, char** argv) {
                 break;
             case 'k':
                 args.kill = true;
+                break;
+            case 'v':
+                args.verbose = true;
                 break;
             case 'h':
             case '?':

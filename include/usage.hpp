@@ -14,6 +14,7 @@ static void usage()
                 << "  -l, --log=LOG_FILE         log file (not implemented)\n"
                 << "  -D, --daemon               run in background\n"
                 << "  -k, --kill                 stop all\n"
+                << "  -v  --verbose              print key presses\n"
                 << "  -?, -h, --help             help\n";
 }
 
