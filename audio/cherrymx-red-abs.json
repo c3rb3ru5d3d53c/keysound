@@ -1,0 +1,5 @@
+{
+    "dir": "./audio/cherrymx-red-abs",
+    "default": "1.wav",
+    "enter": "4.wav"
+}
