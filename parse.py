@@ -68,7 +68,7 @@ keymap = {
   44: 'Z',
   26: '[',
   27: ']',
-  43: '\\',
+  43: 'backslash',
   39: ';',
   40: "'",
   28: 'Enter',
@@ -118,7 +118,7 @@ keymap = {
   82: '0',
 }
 
-cfg = json.loads(open('mechvibes/src/audio/cherrymx-red-abs/config.json', 'rb').read())
+cfg = json.loads(open('/home/c3rb3ru5/Tools/mechvibes/src/audio/cherrymx-red-abs/config.json', 'rb').read())
 
 def write_key(input: str, offset: int, duration: int, output: str):
     sf = SoundFile(input)
@@ -129,16 +129,14 @@ def write_key(input: str, offset: int, duration: int, output: str):
 
 for k, v in cfg['defines'].items():
     write_key(
-        input='mechvibes/src/audio/cherrymx-red-abs/sound.ogg',
+        input='/home/c3rb3ru5/Tools/mechvibes/src/audio/cherrymx-red-abs/sound.ogg',
         offset=v[0],
         duration=v[1],
         output=f'output/{k}.ogg'
     )
 
-
-
-
-
+# for k, v in keymap.items():
+#     print(f'"{v.lower()}": "{k}.wav",')
 
 # with SoundFile('mechvibes/src/audio/cherrymx-red-abs/out.wav', 'r+') as sf:
 #     data, sr = sf.read()
